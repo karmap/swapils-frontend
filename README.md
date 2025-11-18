@@ -1,16 +1,119 @@
-# React + Vite
+# SWAPI LS – Frontend Documentation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This document provides the required information to run, develop, and deploy the **SWAPI LS Frontend**, built with **React**, **Vite**, and **TanStack Query**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Deployment
 
-## React Compiler
+Production build is available at:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 https://swapils.vercel.app/
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Source Repository
+
+Frontend source code:
+
+🔗 https://github.com/karmap/swapils-frontend
+
+Clone the project:
+
+git clone https://github.com/karmap/swapils-frontend
+cd swapils-frontend
+
+---
+
+## 🛠️ Local Development
+
+Install dependencies:
+
+npm install
+
+Run the development server:
+
+npm run dev
+
+This starts the app on the default Vite port (usually http://localhost:5173).
+
+---
+
+## 🔧 Environment Variables
+
+The frontend requires a single environment variable for API communication.
+
+Create a `.env` file in the project root:
+
+VITE_API_BASE=<your-backend-url>
+
+You can use either a local or remote backend.
+
+Examples:
+
+# Local backend
+VITE_API_BASE=http://localhost:8787
+
+# Remote backend
+VITE_API_BASE=https://swapils-api.example.com
+
+No additional variables are needed.
+
+---
+
+## 📁 Project Structure (Basic Overview)
+
+src/
+  components/     → UI components
+  context/        → Global search context
+  hooks/          → Custom hooks
+  services/       → API helpers
+  pages/          → Page components
+  App.jsx         → Root application component
+  main.jsx        → Vite entry point
+
+---
+
+## 🧪 Testing (Optional)
+
+If tests are added in the future, they can be run using:
+
+npm test
+
+(Only include this section if applicable.)
+
+---
+
+## 🏗️ Build for Production
+
+Create an optimized build:
+
+npm run build
+
+Preview the production build locally:
+
+npm run preview
+
+---
+
+## 🌐 Deployment Notes
+
+The project is deployed on Vercel.
+
+- Environment variables must be set in the Vercel dashboard:
+  - VITE_API_BASE
+- No server-side rendering is used.
+- The app is fully static except for API calls to the backend.
+
+---
+
+## ✔️ Summary
+
+To run the frontend, you only need:
+
+1. Clone the repo
+2. Install dependencies
+3. Create `.env` with `VITE_API_BASE`
+4. Run `npm run dev`
+
+That’s it — the frontend will be fully operational.

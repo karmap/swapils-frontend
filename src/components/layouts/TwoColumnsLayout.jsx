@@ -1,5 +1,5 @@
 
-const DetailColumnsLayout = ({ title, colA, colB }) => {
+const TwoColumnsLayout = ({ title, colA, colB }) => {
   return (
     <div className='detail-content'>
         <h2 className='detail-title'>{title}</h2>
@@ -15,4 +15,4 @@ const DetailColumnsLayout = ({ title, colA, colB }) => {
   )
 }
 
-export default DetailColumnsLayout
+export default TwoColumnsLayout
