@@ -20,8 +20,9 @@ Frontend source code:
 
 Clone the project:
 
-git clone https://github.com/karmap/swapils-frontend
-cd swapils-frontend
+`git clone https://github.com/karmap/swapils-frontend`
+
+`cd swapils-frontend`
 
 ---
 
@@ -29,11 +30,11 @@ cd swapils-frontend
 
 Install dependencies:
 
-npm install
+`npm install`
 
 Run the development server:
 
-npm run dev
+`npm run dev`
 
 This starts the app on the default Vite port (usually http://localhost:5173).
 
@@ -45,17 +46,14 @@ The frontend requires a single environment variable for API communication.
 
 Create a `.env` file in the project root:
 
-VITE_API_BASE=<your-backend-url>
+`VITE_API_BASE=<your-backend-url>`
 
 You can use either a local or remote backend.
 
 Examples:
 
-# Local backend
-VITE_API_BASE=http://localhost:8787
-
-# Remote backend
-VITE_API_BASE=https://swapils-api.example.com
+Local backend
+`VITE_API_BASE=http://localhost:8787`
 
 No additional variables are needed.
 
@@ -63,6 +61,7 @@ No additional variables are needed.
 
 ## 📁 Project Structure (Basic Overview)
 
+```
 src/
   components/     → UI components
   context/        → Global search context
@@ -71,28 +70,18 @@ src/
   pages/          → Page components
   App.jsx         → Root application component
   main.jsx        → Vite entry point
-
----
-
-## 🧪 Testing (Optional)
-
-If tests are added in the future, they can be run using:
-
-npm test
-
-(Only include this section if applicable.)
-
+```
 ---
 
 ## 🏗️ Build for Production
 
 Create an optimized build:
 
-npm run build
+`npm run build`
 
 Preview the production build locally:
 
-npm run preview
+`npm run preview`
 
 ---
 
