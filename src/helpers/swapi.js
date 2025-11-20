@@ -3,7 +3,7 @@ import { searchWithTrackingStats } from "./trackingStats";
 const API_URL = `${import.meta.env.VITE_API_BASE}${"/api/swapi"}`;
 
 export const getPeople = async (query) => {
-  const res = await fetch(`${API_URL}/people/?search=${encodeURIComponent(query)}`);
+  const res = await fetch(`${API_URL}/people/search/${encodeURIComponent(query)}`);
   if (!res.ok) throw new Error("Network error");
   return res.json();
 };
@@ -15,7 +15,7 @@ export const getPerson = async (id) => {
 };
 
 export const getMovies = async (query) => {
-  const res = await fetch(`${API_URL}/films/?search=${encodeURIComponent(query)}`);
+  const res = await fetch(`${API_URL}/films/search/${encodeURIComponent(query)}`);
   if (!res.ok) throw new Error("Network error");
   return res.json();
 };
