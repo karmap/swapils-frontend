@@ -7,8 +7,8 @@ import TwoColumnsLayout from '../layouts/TwoColumnsLayout';
 export const MoviePage = () => {
   const { id } = useParams();
   const detail = useDetailQuery("movies", id);
-  const data = detail.data;
-  
+  const data = detail.data
+
   if (detail.isLoading) return <div>Loading...</div>;
   if (detail.error) return <div>Error: {detail.error.message}</div>;
 
@@ -24,7 +24,7 @@ export const MoviePage = () => {
   const linksColumnContent = (
     <>
       <h3>Characters</h3>
-      <MoviesPeopleLinks peopleUrls={data.characters} />
+      <MoviesPeopleLinks characters={data.characters} />
     </>
   );
 

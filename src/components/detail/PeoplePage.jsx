@@ -1,6 +1,6 @@
+import AppLayout from '../layouts/AppLayout';
 import { Link, useParams } from 'react-router';
 import { useDetailQuery } from '../../hooks/useDetailQuery';
-import AppLayout from '../layouts/AppLayout';
 import PeopleMoviesLink from './PeopleMoviesLink';
 import TwoColumnsLayout from '../layouts/TwoColumnsLayout';
 
@@ -29,7 +29,7 @@ export const PeoplePage = () => {
   const linksColumnContent = (
     <>
       <h3>Movies</h3>
-      <PeopleMoviesLink filmUrls={data.films} />
+      <PeopleMoviesLink films={data.films} />
     </>
   )
 

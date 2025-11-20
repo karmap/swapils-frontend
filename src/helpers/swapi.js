@@ -9,7 +9,7 @@ export const getPeople = async (query) => {
 };
 
 export const getPerson = async (id) => {
-  const res = await fetch(`${API_URL}/people/${id}/`);
+  const res = await fetch(`${API_URL}/people/${id}/with-movies`);
   if (!res.ok) throw new Error("Network error");
   return res.json();
 };
@@ -21,7 +21,7 @@ export const getMovies = async (query) => {
 };
 
 export const getMovie = async (id) => {
-  const res = await fetch(`${API_URL}/films/${id}/`);
+  const res = await fetch(`${API_URL}/films/${id}/with-people`);
   if (!res.ok) throw new Error("Network error");
   return res.json();
 };
